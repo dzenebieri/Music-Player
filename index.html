@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Spotify.png">
+    <link rel="mask-icon" href="images/Spotify.svg">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <a href="https://github.com/dzenebieri/Music-Player" target="_blank" class="dzenebieriGitHub">
+        <img src="images/GitHub.png" width="30px" height="30px">
+    </a>
+
+    <div class="MusDivCS">
+        <div class="PlayerDivCS">
+
+            <button class="PlaylistBNCS">
+                Playlist
+                <span class="material-symbols-rounded">
+                    expand_more
+                </span>
+            </button>
+            <ul class="PlaylistULCS" style="display: none;">
+            </ul>
+
+            <div class="musInfoDivCS">
+                <div class="imgDivCS"></div>
+                <div class="titleDivCS"></div>
+            </div>
+
+            <div class="volTimeDivCS">
+                <button>
+                    <span class="material-symbols-rounded">
+                        volume_up
+                    </span>
+                </button>
+                <input type="range" value="100" max="100" min="0" class="volumeINCS">
+            </div>
+
+            <div class="volTimeDivCS">
+                <div class="timeCurrMusCS">00:00</div>
+                <input type="range" value="0" min="0" max="100" class="timeINCS">
+                <div class="timeMusCS">00:00</div>
+            </div>
+
+            <div class="BNsDivCS">
+                <button id="shuffleBNID" onclick="musShuffle()">
+                    <span class="material-symbols-rounded">
+                        shuffle
+                    </span>
+                </button>
+                <button onclick="prevMus()">
+                    <span class="material-symbols-rounded">
+                        skip_previous
+                    </span>
+                </button>
+                <button id="PplayBNID" onclick="playPMus()">
+                    <span class="material-symbols-rounded">
+                        play_circle
+                    </span>
+                </button>
+                <button onclick="nextMus()">
+                    <span class="material-symbols-rounded">
+                        skip_next
+                    </span>
+                </button>
+                <button onclick="musReplay()">
+                    <span class="material-symbols-rounded">
+                        replay
+                    </span>
+                </button>
+            </div>
+
+            <div class="waveDivCS">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="scrypt.js"></script>
+
+</body>
+
+</html>
